@@ -4,6 +4,7 @@ import com.study.module.one.inter.FlyBehavior;
 import com.study.module.one.inter.QuackBehavior;
 
 /**
+ * 鸭子超类
  * @author liqc 2017/12/16.
  */
 public abstract class Duck {
@@ -22,5 +23,16 @@ public abstract class Duck {
     public void swim(){
 
         System.out.println("All ducks float,even decoys");
+    }
+
+    //动态的指定行为
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+
+        this.quackBehavior = quackBehavior;
     }
 }
